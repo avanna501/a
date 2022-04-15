@@ -68,7 +68,7 @@ void MyServer::incoming_connection()
 
     soc = this->nextPendingConnection();
     connect(soc, &QAbstractSocket::disconnected, soc, &QObject::deleteLater);
-
+    qInfo()<<"new connection";
     soc->write(data);
     soc->disconnectFromHost();
 }
