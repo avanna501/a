@@ -45,12 +45,13 @@ private:
     QNetworkAccessManager manager;
     QString target;
     int i=1;
-    QNetworkReply* reply;
+//    QNetworkReply* reply;
+    QString file_name;
 
 public slots:
     void download_request();
-    bool download(QNetworkReply* reply);
-    void save();
+    void download();
+    //void save();
 };
 
 #endif // DOWNLOADER_H

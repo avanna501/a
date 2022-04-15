@@ -93,18 +93,35 @@ void Downloader::download_request()
     QNetworkRequest request(url);
     QNetworkReply* reply = manager.get(request);
 
-    QObject::connect(reply,&QNetworkReply::finished,this,download(reply));
+    QObject::connect(reply,&QNetworkReply::finished,this,&Downloader::download);
 }
 
-bool Downloader::download(QNetworkReply * reply)
+void Downloader::download()
 {
-    QString file_name=QStringLiteral("C:/Users/inter/projects_a/client_server/server_client/download/downloadedfile_%1.png").arg(i);
+    auto rep = dynamic_cast<QNetworkReply*>(sender());
+    if(!rep){
+        return;
+    }
+    file_name=QStringLiteral("C:/Users/inter/projects_a/client_server/server_client/download/downloadedfile_%1.png").arg(i);
     QFile localFile(file_name);
     if (!localFile.open(QIODevice::WriteOnly))
-        return false;
-    QByteArray sdata = reply->readAll();
-    localFile.write(sdata);
-    qDebug() << sdata;
+        return ;
+//    QByteArray sdata = rep->readAll();
+//    QPixmap pic;
+//    while (rep->bytesAvailable())
+//    {
+//        QDataStream out(&localFile);
+////            out << sdata;
+//        if (localFile.write(rep->read(512)) == -1)
+//            qDebug() << "Error while reading data:" << localFile.errorString();
+//    }
+//    pic.loadFromData(sdata,"PNG");
+    auto data = rep->readAll();
+    localFile.write(data);
+//    localFile.write(pic);
+//    qDebug() << pic;
+//    pic.save(file_name);
     localFile.close();
-    return true;
+
+
 }
