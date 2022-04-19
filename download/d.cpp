@@ -1,4 +1,4 @@
-#include "downloader.h"
+#include "d.h"
 #include <QUrl>
 #include <QNetworkRequest>
 #include <QFile>
@@ -8,34 +8,44 @@
 #include <QString>
 
 Downloader::Downloader() : QObject(0)
-{}
-Downloader::~Downloader(){}
+{
+    qInfo()<<"created";
+}
+Downloader::~Downloader()
+{
+    qInfo()<<"destroyed";
+}
+Downloader::Downloader(const Downloader &){};
 
 void Downloader::setTarget(const QString &t)
 {
     this->target = t;
 }
 
-void Downloader::download_request()
+void Downloader::download_request(int j)
 {
     QUrl url = target;
     QNetworkRequest request(url);
     QNetworkReply* reply = manager.get(request);
-
+    i=j;
     QObject::connect(reply,&QNetworkReply::finished,this,&Downloader::download);
 }
 
 void Downloader::download()
 {
     auto rep = dynamic_cast<QNetworkReply*>(sender());
-    if(!rep){
+    if(!rep)
+    {
         return;
     }
-    file_name=QStringLiteral("C:/Users/inter/projects_a/client_server/server_client/download/downloadedfile_%1.png").arg(i);
+
+    file_name=QString("C:/Users/inter/projects_a/client_server/server_client/download/downloaded_file_%1.png").arg(i);
     QFile localFile(file_name);
     if (!localFile.open(QIODevice::WriteOnly))
         return ;
     auto data = rep->readAll();
     localFile.write(data);
     localFile.close();
+             qInfo()<<"download___!!!"<<i;
+    rep->deleteLater();
 }

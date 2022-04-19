@@ -1,6 +1,5 @@
-#ifndef DOWNLOADER_H
-#define DOWNLOADER_H
-
+#ifndef D_H
+#define D_H
 #include <QObject>
 #include <QString>
 #include <QNetworkAccessManager>
@@ -13,18 +12,19 @@ class Downloader : public QObject
 public:
     explicit Downloader();
     ~Downloader();
+    Downloader(const Downloader&);
 
     void setTarget(const QString& t);
 
 private:
     QNetworkAccessManager manager;
     QString target;
-    int i=1;
+    int i;
     QString file_name;
 
 public slots:
-    void download_request();
+    void download_request(int j);
     void download();
 };
 
-#endif // DOWNLOADER_H
+#endif // D_H
