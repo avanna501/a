@@ -1,12 +1,11 @@
-#include "client.h"
-#include "download.h"
+#include "widget.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyClient my;
-    my.segmentation();
+    Widget w;
+    w.show();
     return a.exec();
 }

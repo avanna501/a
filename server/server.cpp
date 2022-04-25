@@ -10,31 +10,24 @@
 MyServer::MyServer()
 {
     read();
-    if (!list.isEmpty() && listen(QHostAddress::Any, 45555))
+    if (!list.isEmpty() && listen(QHostAddress::Any, 2525))
     {
-        qInfo() << "Server Started";
+       qInfo() << "Server Started";
+       QString ipAddress;
+         QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
+         for (int i = 0; i < ipAddressesList.size(); ++i) {
+             if (ipAddressesList.at(i) != QHostAddress::LocalHost &&
+                 ipAddressesList.at(i).toIPv4Address()) {
+                 ipAddress = ipAddressesList.at(i).toString();
+                 break;
+             }
+         }
+         qInfo()<<ipAddress;
        connect(this, &QTcpServer::newConnection, this, &MyServer::incoming_connection);
     }
 
     else
         qInfo() << "Error starting server or empty file";
-
-//    QString ipAddress;
-//    QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
-//     // use the first non-localhost IPv4 address
-//     for (int i = 0; i < ipAddressesList.size(); ++i) {
-//         if (ipAddressesList.at(i) != QHostAddress::LocalHost &&
-//             ipAddressesList.at(i).toIPv4Address()) {
-//             ipAddress = ipAddressesList.at(i).toString();
-//             break;
-//         }
-//     }
-//     // if we did not find one, use IPv4 localhost
-//     if (ipAddress.isEmpty())
-//         ipAddress = QHostAddress(QHostAddress::LocalHost).toString();
-//     statusLabel->setText(tr("The server is running on\n\nIP: %1\nport: %2\n\n"
-//                             "Run the Fortune Client example now.")
-//                          .arg(ipAddress).arg(MyServer->serverPort()));
 
 }
 
@@ -71,30 +64,4 @@ void MyServer::incoming_connection()
     qInfo()<<"new connection";
     soc->write(data);
     soc->disconnectFromHost();
-}
-
-void MyServer::show(int argc, char *argv[])
-{
-        QApplication app(argc, argv);
-        QWidget  window;
-
-//        QLabel
-//        QLineEdit *queryEdit = new QLineEdit();
-//        QTableView *resultView = new QTableView();
-
-//        QHBoxLayout *queryLayout = new QHBoxLayout();
-//        queryLayout->addWidget(queryLabel);
-//        queryLayout->addWidget(queryEdit);
-
-//        QVBoxLayout *mainLayout = new QVBoxLayout();
-//        mainLayout->addLayout(queryLayout);
-//        mainLayout->addWidget(resultView);
-//        window.setLayout(mainLayout);
-
-//        // Set up the model and configure the view...
-//        window.setWindowTitle(
-//            QApplication::translate("nestedlayouts", "Nested layouts"));
-        window.show();
-        app.exec();
-        return;
 }
