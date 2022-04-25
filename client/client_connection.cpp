@@ -18,70 +18,33 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QStyleHints>
+#include <QHostAddress>
 
 MyClient::MyClient(){qInfo()<<"I'm in the constructor of MyClass";}
 
-
-//MyClient::MyClient(QWidget *parent) : QObject(parent)
-//    , host(new QLineEdit)
-//    , portLineEdit(new QLineEdit)
-//    , getPictures(new QPushButton(tr("Get URL-s")))
-//    , tcpSocket(new QTcpSocket(this))
-
-
-////    portLineEdit->setValidator(new QIntValidator(1, 65535, this));
-//    hostIP.setHostName(host->text());
-//    auto hostLabel = new QLabel(tr("&Server name:"));
-//    hostLabel->setBuddy(host);
-
-
-
-//    connect(getPictures, &QAbstractButton::clicked, this, &Client::requestURL);
-
-
-
-
 void MyClient::request(QString server_ip)
 {
-
     qInfo()<<"I'm in MyClient.request";
-    qInfo()<<server_ip;
-
-    hostIP.setHostName(server_ip);
-    in.setDevice(tcpSocket);
+    QHostAddress ip;
+    ip.setAddress(server_ip);
+    qInfo()<<ip;
+//    QTcpSocket * tcp=new QTcpSocket(this);
+    tcp/*Socket*/->connectToHost(ip,2525);
+    qInfo()<<"HERE";
+    in.setDevice(tcp);
     in.setVersion(QDataStream::Qt_4_0);
-    qInfo()<<"I'm in MyClient.request 1";
-//    tcpSocket->abort();
-
-    connect (tcpSocket,&QTcpSocket::readyRead(),this,read);
-
-    tcpSocket->connectToHost(server_ip,2525/*portLineEdit->text().toInt()*/);
-    qInfo()<<"I'm in MyClient.request 2";
-    connect(tcpSocket, &QIODevice::readyRead, this, &MyClient::read);
-    qInfo()<<"I'm in MyClient.request 3";
-//    connect(tcpSocket, &QAbstractSocket::errorOccurred, this, &MyClient::displayError);
-
+    connect(tcp/*Socket*/, &QTcpSocket::readyRead,this,&MyClient::read);
 }
 
 void MyClient::read()
 {
+    qInfo()<<"function read";
+
     in.startTransaction();
     in >> line;
+    qInfo()<<line;
     if (!in.commitTransaction())
         return;
-}
+    tcp->deleteLater();
 
-////void MyClient::displayError(QAbstractSocket::SocketError socketError)
-////{
-////    switch (socketE[[rror)
-////    {
-////    case QAbstractSocket::RemoteHostClosedError: break;
-////    case QAbstractSocket::HostNotFoundError:     QMessageBox::information(this, tr("Fortune Client"), tr("The host was not found. Please check the host name and port settings."));
-////                                                     break;
-////    case QAbstractSocket::ConnectionRefusedError:QMessageBox::information(this, tr("Fortune Client"), tr("The connection was refused by the peer. Make sure the fortune server is running, "
-////                                                     "and check that the host name and port settings are correct."));
-////                                                     break;
-////    default:        QMessageBox::information(this, tr("Fortune Client"), tr("The following error occurred: %1.").arg(tcpSocket->errorString()));
-////    }
-////    getPictures->setEnabled(true);
-////}
+}

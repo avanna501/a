@@ -25,8 +25,8 @@ public:
 
 //private:
     QHostInfo hostIP;
-
-    QTcpSocket *tcpSocket = nullptr;
+    QTcpSocket * tcp=new QTcpSocket(this);
+//    QTcpSocket *tcpSocket = nullptr;
     QDataStream in;
 
 };

@@ -8,11 +8,11 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {/*ui->server_ip_line->text()*/
     ui->setupUi(this);
-//    connect(&ui,SIGNAL(ui->pushButton->clicked()),&client,MyClient::client.request());       how to modify this line so that it works
+//    connect(ui->pushButton,&QPushButton::clicked,&client,&MyClient::request);     //  how to modify this line so that it works
 //    MyClient client;
-//  //  connect(ui->pushButton, &QPushButton::clicked, this, [&client,ui->server_ip_line]
-//  //                                              {client.request(ui->server_ip_line->text());});
-    connect(ui->pushButton, &QPushButton::clicked,[this]{sender();});
+//  connect(ui->pushButton, &QPushButton::clicked, this, [&client,ui->server_ip_line]
+//                                              {client.request(ui->server_ip_line->text());});
+    connect(ui->pushButton, &QPushButton::clicked,[this]{starting_the_request();});
 
 };
 Widget::~Widget()
@@ -20,7 +20,7 @@ Widget::~Widget()
     delete ui;
 }
 
-void Widget::sender()
+void Widget::starting_the_request()
 {
     qInfo()<<"I'm in function sender";
     QString l=ui->server_ip_line->text();

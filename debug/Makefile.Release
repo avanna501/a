@@ -205,13 +205,13 @@ release/moc_client_connection.cpp: ../client/client_connection.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/QString \
 		release/moc_predefs.h \
 		C:/Qt/6.2.4/mingw_64/bin/moc.exe
-	C:\Qt\6.2.4\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Anna/projects/homework/a/debug/release/moc_predefs.h -IC:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -IC:/Users/Anna/projects/homework/a/client -IC:/Qt/6.2.4/mingw_64/include -IC:/Qt/6.2.4/mingw_64/include/QtWidgets -IC:/Qt/6.2.4/mingw_64/include/QtGui -IC:/Qt/6.2.4/mingw_64/include/QtNetwork -IC:/Qt/6.2.4/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include ..\client\client_connection.h -o release\moc_client_connection.cpp
+	C:\Qt\6.2.4\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/inter/projects_a/server_client_string/a/debug/release/moc_predefs.h -IC:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -IC:/Users/inter/projects_a/server_client_string/a/client -IC:/Qt/6.2.4/mingw_64/include -IC:/Qt/6.2.4/mingw_64/include/QtWidgets -IC:/Qt/6.2.4/mingw_64/include/QtGui -IC:/Qt/6.2.4/mingw_64/include/QtNetwork -IC:/Qt/6.2.4/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include ..\client\client_connection.h -o release\moc_client_connection.cpp
 
 release/moc_widget.cpp: ../client/widget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		../client/client_connection.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QTcpSocket \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetworkglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig-bootstrapped.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig.h \
@@ -232,22 +232,18 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobalstatic.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qnumeric.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qabstractsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostaddress.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qchar.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydatapointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydataops.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainertools_impl.h \
@@ -259,8 +255,14 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qutf8stringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringtokenizer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringbuilder.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qhashfunctions.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterator.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearraylist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringlist.h \
@@ -273,7 +275,6 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qdatastream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterable.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmetacontainer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainerinfo.h \
@@ -281,6 +282,29 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmath.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbindingstorage.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QHostInfo \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostinfo.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QDataStream \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QString \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmargins.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
@@ -298,9 +322,6 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qregion.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qline.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpixmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
@@ -309,18 +330,8 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qevent.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qpointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qeventpoint.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvector2d.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvectornd.h \
@@ -336,7 +347,7 @@ release/moc_widget.cpp: ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
 		release/moc_predefs.h \
 		C:/Qt/6.2.4/mingw_64/bin/moc.exe
-	C:\Qt\6.2.4\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Anna/projects/homework/a/debug/release/moc_predefs.h -IC:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -IC:/Users/Anna/projects/homework/a/client -IC:/Qt/6.2.4/mingw_64/include -IC:/Qt/6.2.4/mingw_64/include/QtWidgets -IC:/Qt/6.2.4/mingw_64/include/QtGui -IC:/Qt/6.2.4/mingw_64/include/QtNetwork -IC:/Qt/6.2.4/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include ..\client\widget.h -o release\moc_widget.cpp
+	C:\Qt\6.2.4\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/inter/projects_a/server_client_string/a/debug/release/moc_predefs.h -IC:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -IC:/Users/inter/projects_a/server_client_string/a/client -IC:/Qt/6.2.4/mingw_64/include -IC:/Qt/6.2.4/mingw_64/include/QtWidgets -IC:/Qt/6.2.4/mingw_64/include/QtGui -IC:/Qt/6.2.4/mingw_64/include/QtNetwork -IC:/Qt/6.2.4/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include ..\client\widget.h -o release\moc_widget.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -569,14 +580,15 @@ release/client_connection.o: ../client/client_connection.cpp ../client/client_co
 		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/QStyleHints \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qstylehints.h
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qstylehints.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QHostAddress
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\client_connection.o ..\client\client_connection.cpp
 
 release/main.o: ../client/main.cpp ../client/widget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		../client/client_connection.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QTcpSocket \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetworkglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig-bootstrapped.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig.h \
@@ -597,22 +609,18 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobalstatic.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qnumeric.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qabstractsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostaddress.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qchar.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydatapointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydataops.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainertools_impl.h \
@@ -624,8 +632,14 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qutf8stringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringtokenizer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringbuilder.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qhashfunctions.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterator.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearraylist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringlist.h \
@@ -638,7 +652,6 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qdatastream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterable.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmetacontainer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainerinfo.h \
@@ -646,6 +659,29 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmath.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbindingstorage.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QHostInfo \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostinfo.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QDataStream \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QString \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmargins.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
@@ -663,9 +699,6 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qregion.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qline.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpixmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
@@ -674,18 +707,8 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qevent.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qpointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qeventpoint.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvector2d.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvectornd.h \
@@ -723,10 +746,10 @@ release/main.o: ../client/main.cpp ../client/widget.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\client\main.cpp
 
 release/widget.o: ../client/widget.cpp ../client/widget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		../client/client_connection.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QTcpSocket \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetworkglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig-bootstrapped.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qconfig.h \
@@ -747,22 +770,18 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qglobalstatic.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qnumeric.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qabstractsocket.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostaddress.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qchar.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydatapointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qarraydataops.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainertools_impl.h \
@@ -774,8 +793,14 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qutf8stringview.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringtokenizer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringbuilder.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qhashfunctions.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterator.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearraylist.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringlist.h \
@@ -788,7 +813,6 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qdatastream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qiterable.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmetacontainer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontainerinfo.h \
@@ -796,6 +820,29 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmath.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qobject_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qbindingstorage.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QHostInfo \
+		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostinfo.h \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QDataStream \
+		C:/Qt/6.2.4/mingw_64/include/QtCore/QString \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qmargins.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
@@ -813,9 +860,6 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qregion.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qline.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qpixmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
@@ -824,18 +868,8 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qevent.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qpointer.h \
 		C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata_impl.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qhash.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qdebug.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qeventpoint.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvector2d.h \
 		C:/Qt/6.2.4/mingw_64/include/QtGui/qvectornd.h \
@@ -891,18 +925,7 @@ release/widget.o: ../client/widget.cpp ../client/widget.h \
 		C:/Qt/6.2.4/mingw_64/include/QtWidgets/QPushButton \
 		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/6.2.4/mingw_64/include/QtGui/qicon.h \
-		../client/client_connection.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QTcpSocket \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtcpsocket.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetworkglobal.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qtnetwork-config.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qabstractsocket.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostaddress.h \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/QHostInfo \
-		C:/Qt/6.2.4/mingw_64/include/QtNetwork/qhostinfo.h \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/QDataStream \
-		C:/Qt/6.2.4/mingw_64/include/QtCore/QString
+		C:/Qt/6.2.4/mingw_64/include/QtGui/qicon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\widget.o ..\client\widget.cpp
 
 release/moc_client_connection.o: release/moc_client_connection.cpp 
